@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# OpenAI API key
+OPENAI_API_KEY = "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"
 
 # Application definition
 
@@ -37,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "codebotApp",
 ]
 
 MIDDLEWARE = [
@@ -54,7 +57,7 @@ ROOT_URLCONF = "codebot.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": ['codebotApp/templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

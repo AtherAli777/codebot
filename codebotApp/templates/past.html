@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if past %}
+        {% for q in past %}
+        {{q.question}} <br>
+<pre> <!--pre adds space and properly formats the code-->
+<code class="line-numbers language-{{q.language}}">
+{{q.code_answer}}
+</code>
+</pre>
+<a href="{% url 'delete' q.id %}" class="btn btn-outline-info btn-sm">Delete</a> <br><br>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
